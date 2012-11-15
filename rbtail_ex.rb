@@ -12,7 +12,8 @@ Bundler.setup
 Bundler.require(:default, ENV["RACK_ENV"].to_sym)
 
 require "filewatch/tail"
-#require "inotify/fd"
+
+WS_PORT=1214
 
 trap('INT') do
   EM.stop
@@ -27,9 +28,9 @@ def main(args)
 
   EventMachine.run do
  
-    puts "Starting WS server on port 8000"
+    puts "Starting WS server on port #{WS_PORT}"
  
-    EventMachine::WebSocket.start(host: '0.0.0.0', port: 1213) do |socket|
+    EventMachine::WebSocket.start(host: '0.0.0.0', port: WS_PORT) do |socket|
 
       @channel = EM::Channel.new
 

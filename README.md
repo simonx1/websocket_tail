@@ -1,4 +1,1 @@
-websocket_tail
-==============
-
-websocket_tail
+bundle exec warble
