@@ -2,6 +2,6 @@
 #
 # Simple 'tail -f' example.
 # Usage example:
-#   tail.rb /var/log/messages
+#   rbtail.rb /var/log/messages
 
 require_relative '../rbtail_ex'
