@@ -1,17 +1,6 @@
-#!/usr/bin/env ruby
-#
-# Simple 'tail -f' example.
-# Usage example:
-#   tail.rb /var/log/messages
-
 ENV["RACK_ENV"] ||= "development"
 
 require "rubygems"
-require "bundler/setup"
-
-Bundler.setup
-Bundler.require(:default, ENV["RACK_ENV"].to_sym)
-
 require "filewatch/tail"
 
 WS_PORT=1214
